@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block title %}- Home{% endblock %}
+
+{% block content_block %}
+
+    <div id="main">
+
+
+        <div class="content">
+    
+             {% for post in posts %}
+                <div class="blog-post">
+                    <h3 id="blog-post-date">
+                        <time datetime="{{post.created|date:"c"}}"> {{post.date|date}} </time>
+                    </h3>
+
+                    <a href="{{post.get_absolute_url}}"><h2 class="blog-post-title">{{post.title}}</h2></a>
+                    
+
+                    <div class="blog-post-content">{{post.content |safe |truncatechars_html:800}}</div>
+                </div>       
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+

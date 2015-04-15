@@ -1,0 +1,29 @@
+<div id="main">
+	  <div id="main">
+        <div class="header">
+            <h1>Vikram Sundaram</h1>
+            <h2> Spaceships: Battle for the Frontier </h2>
+        </div>
+
+        <div class="content">
+
+			<h2 id="content-subhead"> Introduction </h2>	
+			
+			<p id="introduction">Many Computer Science programs have students creating a large scale applicaiton at the end of their program. For me, that was Spaceships: Battle for the Frontier. </p> The project (a team based activity, which posed it's own difficulties) was to build a game using any language and any libraries we chose. This article outlines the details of the project. 
+
+			<h2 id="content-subhead"> The Game </h2>
+
+			<p id="introduction">Spaceships: Battle for the Frontier is a real time, online multiplayer, strategy game. Players are matched up in real time with other players from around the world. Each player has an assortment of 7 ships (2 Destroyers, 2 MineLayers, 2 Cruisers, 1 Gunboat) The game begins with the players selecting where they would like to place their ships. Once all the ships have been placed, the action begins!</p>
+
+			<p id="introduction">Players must control their ships, each with varying speeds and capabilities, and attack and destroy either all the opponents ships, or their base. If a players ship is damaged, it can retreat back to the base in order to heal itself. Moreover, proximity mines can be laid that upon notification that a ship (enemy or friendly) is next to a mine, detonates damaging all ships in the surrounding area.</p>
+			
+			<h2 id="content-subhead">The Technical Details </h2>
+
+			<p id="introduction">Firstly, it should be noted that the source code is available, open source, at <a href="https://github.com/emiraydin/spaceships">Github.</a> Feel free to take a look.</p>
+
+			<p id="introduction">The progam was written entirely in Java using the <a href="http://libgdx.badlogicgames.com/"> LibGDX</a> development environment. We wrote the networking ourselves, using Java Sockets in order to transfer data. Moreover, we wrote the code for the server, that handled the majority of the game logic. This meant that players computers simply needed to have access to the graphics rendering code, meaning their own overhead was very low. Since the game was rendered in 2D using simple Geometric Shapes, the overhead on any one computer was quite low. This meant that the bottleneck, if any, would occur on the server, meaning both players would be affected equally, thus limiting the implications on gameplay. </p>
+			
+			<p id="introduction"> If anyone wants to learn about LibGDX game development, I strongly urge them to check out <a href="http://www.amazon.com/Learning-Libgdx-Development-Andreas-Oehlke/dp/1782166041"> Learning LibGDX Game Development by Andreas Oehike. </a> This is the book we chose to use and it definitely made our lives easier. </p>
+
+        </div>
+</div>

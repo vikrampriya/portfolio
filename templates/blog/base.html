@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+{% load staticfiles %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+    <title>Vik Sundaram {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="{% static "css/layouts/side-menu-old-ie.css"%}">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="{% static "css/layouts/side-menu.css"%}">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="{% static "css/base.css"%}">
+</head>
+
+
+<body>
+    <div class="header">
+        <h1>Vikram Sundaram</h1>
+        <div class="pure-menu pure-menu-horizontal">
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="{% url 'blog.views.index' %}" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="{% url 'blog.views.aboutme' %}" class="pure-menu-link">About Me</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+        </ul>
+        </div>
+    </div>
+
+    <div>
+        {% block content_block %}{% endblock %}
+    </div>
+    
+
+    <script src="{% static "js/ui.js"%}"></script>
+
+
+</body>
+</html>
+
